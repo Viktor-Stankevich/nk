@@ -1,0 +1,14 @@
+body
+  &.block
+    overflow: hidden
+  
+.wrapper
+  box-sizing: border-box
+
+  &.portfolio
+    overflow: visible
+
+@include breakpoint(md)
+  .wrapper
+    overflow: hidden
+    
