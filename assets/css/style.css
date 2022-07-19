@@ -222,7 +222,8 @@ header > .menu > .menu-list, header > .category > .menu-list {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 header > .menu > .menu-list > ul, header > .category > .menu-list > ul {
   display: -webkit-box;
@@ -246,6 +247,20 @@ header > .menu > .menu-list > ul, header > .category > .menu-list > ul {
   }
   header > .menu > .menu-btn_active > span, header > .menu > .menu-btn_active > span::before, header > .menu > .menu-btn_active > span::after, header > .category > .menu-btn_active > span, header > .category > .menu-btn_active > span::before, header > .category > .menu-btn_active > span::after {
     background-color: #fff;
+  }
+  header > .menu > .menu-list, header > .category > .menu-list {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  header > .menu > .menu-list::-webkit-scrollbar, header > .category > .menu-list::-webkit-scrollbar {
+    width: 2px;
+    background-color: #1A1A1D;
+  }
+  header > .menu > .menu-list::-webkit-scrollbar-thumb, header > .category > .menu-list::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 9em;
+    -webkit-box-shadow: inset 1px 1px 10px #f3faf7;
+            box-shadow: inset 1px 1px 10px #f3faf7;
   }
   header > .menu > .menu-list > ul, header > .category > .menu-list > ul {
     -webkit-box-orient: horizontal;
@@ -370,6 +385,16 @@ main.portfolio > .gallery-list > .gallery-item:hover > img {
   }
   main.home > .content.content-right, main.price > .content.content-right, main.contact > .content.content-right {
     overflow-y: scroll;
+  }
+  main.home > .content.content-right::-webkit-scrollbar, main.price > .content.content-right::-webkit-scrollbar, main.contact > .content.content-right::-webkit-scrollbar {
+    width: 2px;
+    background-color: #1A1A1D;
+  }
+  main.home > .content.content-right::-webkit-scrollbar-thumb, main.price > .content.content-right::-webkit-scrollbar-thumb, main.contact > .content.content-right::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 9em;
+    -webkit-box-shadow: inset 1px 1px 10px #f3faf7;
+            box-shadow: inset 1px 1px 10px #f3faf7;
   }
   main.home > .content.content-right > .content-right_featured > .featured-item, main.price > .content.content-right > .content-right_featured > .featured-item, main.contact > .content.content-right > .content-right_featured > .featured-item {
     max-height: 100vh;

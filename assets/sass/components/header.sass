@@ -104,7 +104,8 @@ header
       align-items: center
       height: 100%
 
-      overflow: scroll
+      overflow-x: hidden
+      overflow-y: scroll
 
       & > ul
         display: flex
@@ -131,6 +132,16 @@ header
         & > span::after
           background-color: $background_white_color
       & > .menu-list
+        overflow-x: hidden
+        overflow-y: scroll
+        &::-webkit-scrollbar
+          width: 2px
+          background-color: $background_black_color
+
+        &::-webkit-scrollbar-thumb
+          background-color: $background_white_color
+          border-radius: 9em
+          box-shadow: inset 1px 1px 10px #f3faf7
         & > ul
           flex-direction: row
           flex-wrap: wrap

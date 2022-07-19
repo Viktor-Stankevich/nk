@@ -98,6 +98,15 @@ main
         &.content-right
           overflow-y: scroll
 
+          &::-webkit-scrollbar
+            width: 2px
+            background-color: $background_black_color
+
+          &::-webkit-scrollbar-thumb
+            background-color: $background_white_color
+            border-radius: 9em
+            box-shadow: inset 1px 1px 10px #f3faf7
+
           & > .content-right_featured
             & > .featured-item
               max-height: 100vh
